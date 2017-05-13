@@ -60,3 +60,5 @@ class MyComponent extends Component {
 }
 
 export default MyComponent;
+//当用属性代理构建HOC时，调用顺序不同于 mixin ，上述的执行生命周期过程类似于堆栈调用
+// didmount -> HOC didmount -> (HOCs didmount) -> (HOCs will unmount) -> HOC will unmount -> unmount
