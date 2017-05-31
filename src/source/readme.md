@@ -1,0 +1,20 @@
+- src
+    - addons 包含一系列的工具方法插件
+    - isomorphic 包含一系列同构方法
+    - shared 包含一些公用或常用方法
+    - test 包含一些测试方法等
+    - core/test 包含一些边界错误的测试用例
+    - renderers 是React 代码的核心部分，包含大部分的功能实现
+        - dom
+            - client
+                - 包含 DOM 操作方法（如findDOMNode、setInnerHTML、setTextContent等）
+                - 事件方法（一些非底层的实用性事件方法，如事件监听ReactEventListener,常用事件方法TapEventPlugin、EnterLeaveEventPlugin,合成事件SyntheticEvents）
+            - server 主要包含服务端渲染的实现和方法 (如 ReactServerRendering、ReactServerRenderingTransaction等)
+            - shared
+                - 文本组件 ReactDOMTextComponent
+                - 标签组件 ReactDOMComponent
+                - DOM属性操作 DOMProperty、DOMPropertyOperations
+                - CSS属性操作 CSSProperty、CSSPropertyOperations
+        - shared
+            - event 包含一些更为底层的事件方法，如事件插件中心
+            - reconciler
