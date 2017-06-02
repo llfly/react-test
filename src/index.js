@@ -8,6 +8,7 @@ import {ReactMixin,MyClass,MyComponent,MyContainer,
     MyComponentDecorators1,MyComponentDecorators2,MyComponentDecorators3,MyComponentDecorators4,MyComponentDecorators5
 } from './5-abstract';
 
+import {SearchSelect,SearchSele} from './6-componentCompose';
 
 
 class App extends Component {
@@ -37,15 +38,17 @@ class App extends Component {
          <MyComponent3 />
          <MyComponent4 />
 
+         <MyComponentDecorators1 loggedIn={true} text={'test'}/>
+         <MyComponentDecorators2/>
+         <MyComponentDecorators3 text={'state test'}/>
+         <MyComponentDecorators4/>
+         <MyComponentDecorators5 />
 
         */
         return (
             <div>
-                <MyComponentDecorators1 loggedIn={true} text={'test'}/>
-                <MyComponentDecorators2/>
-                <MyComponentDecorators3 text={'state test'}/>
-                <MyComponentDecorators4/>
-                <MyComponentDecorators5 />
+                <SearchSelect placeholder={"test"} onSearch={e=>{console.log(e)}} data={["1","2","123","123","1231231","424324123"]}/>
+                <SearchSele />
             </div>
         )
     }
