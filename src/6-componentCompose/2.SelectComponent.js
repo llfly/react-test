@@ -7,7 +7,7 @@ class Input extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: props.value
+            value: props.value || ''
         }
     }
 
@@ -61,8 +61,6 @@ class List extends Component {
     render() {
         const { data = [], onClick, active = false } = this.props;
 
-        console.log(data);
-
         const finalList = active ? (<ul className="search-list-wrapper">
             {data.map((item, index) => <ListItem onClick={onClick} label={item} key={index}/>)}
         </ul>) : null;
@@ -92,17 +90,25 @@ const asyncSelectDecorator = params => WrappedComponent => {
         constructor(props) {
             super(props)
             this.state = {}
-            this.onSearch = this.onSearch.bind(this)
+            this.onSearch = this.onSearch.bind(this);
+            this.onClick = this.onClick.bind(this);
             this.state = {
-                data : [1,2,3,4]
             }
         }
 
         onSearch(keyword) {
             // 模拟ajax请求
-            const data = [1, 2, 3, 4].map(count => new Array(count).fill(keyword).join(''))
             this.setState({
-                data,
+                data:params.data.filter(item=>~item.indexOf(keyword)),
+                active:true,
+                keyword
+            })
+        }
+
+        onClick(keyword){
+            this.setState({
+                keyword,
+                active:false
             })
         }
 
@@ -111,15 +117,15 @@ const asyncSelectDecorator = params => WrappedComponent => {
                 <WrappedComponent
                     {...this.props}
                     {...params}
-                    onSearch={this.onSearch}
-                    data={this.state.data}
+                    onChange={this.onSearch}
+                    onClick={this.onClick}
+                    {...this.state}
                 />
             );
         }
     }
     return AsyncSelectDecorator;
 }
-
 
 class Selector extends Component {
     render() {
@@ -135,7 +141,10 @@ class Selector extends Component {
 }
 
 
-const WrapperSelector = compose(asyncSelectDecorator({placeholder: '请输入',onChange:e=>{console.log(e)}}))(Selector);
+const WrapperSelector = compose(asyncSelectDecorator({
+    placeholder: '请输入',
+    data:["111","2222","11112222","33333"]
+}))(Selector);
 
 class SearchSele extends Component {
     render() {
