@@ -32,6 +32,7 @@ module.exports = {
         ]
     },
     plugins:[
+        new webpack.optimize.CommonsChunkPlugin({name:'vendor', filename:'vendor.js'}),
         new htmlWebpackPlugin({
             title:'react',
             template:path.resolve(__dirname,'./src/index.html')

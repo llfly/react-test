@@ -44,7 +44,6 @@ var React = {
 // 接下来我们就探究下 React Element 到底长什么样以及 React 是如何创建这些 React Element 的。
 
 
-
 var ReactElement = function(type, key, ref, self, source, owner, props) {
     var element = {
         $$typeof: REACT_ELEMENT_TYPE,
