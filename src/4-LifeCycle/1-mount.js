@@ -62,7 +62,7 @@ export default class Mount extends Component {
 
 
 //if shouldComponentUpdate return true
-//component will moun
+//component will mount
 //component did mount
 //should component update
 //component will update
