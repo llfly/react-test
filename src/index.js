@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-
-
 import { Setup } from './1-Setup';
-import { 
+import {
     HelloMessage, HelloMessage2,
     Commented,
     Name,
     Style,
     SpreadDemo
- } from './2-Jsx';
-import {
-    StateDemo,
-    PropDemo,
-    PropTypesDemo
-} from './3-State';
-
-
+} from './2-Jsx';
+import { StateDemo, PropDemo, PropTypesDemo } from './3-State';
 import { Mount, Update, Test } from './4-LifeCycle';
 
 import { ParentToChild, ChildToParent, Cross, EETest } from './5-communication';
@@ -59,6 +51,12 @@ class App extends Component {
         <PropTypesDemo/>
 
 
+
+        // 4. LifeCycle
+
+
+
+
          <ParentToChild list={[{value:1},{value:2}]} title={`ParentToChild`}/>
          <ChildToParent />
          <Cross />
@@ -84,14 +82,14 @@ class App extends Component {
          <MyComponentDecorators4/>
          <MyComponentDecorators5 />
 
-         <SearchSelect placeholder={"test"} onSearch={e=>{console.log(e)}} data={["1","2","123","123","1231231","424324123"]}/>
+        <SearchSelect placeholder={"test"} onSearch={e=>{console.log(e)}} data={["1","2","123","123","1231231","424324123"]}/>
         <SearchSele />
 
         */
 
         return (
             <div>
-                <PropDemo/>
+                <PropDemo />
             </div>
         )
     }
