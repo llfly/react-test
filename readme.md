@@ -1,18 +1,12 @@
 
 
-# React
-
-## setup
-
-## jsx
-
-## state vs props
-
-## Component
-
-## Communicate
-
-
-
-
-## HOC
+### react
+- [x] Setup
+- [x] Jsx
+- [x] State
+- [ ] LifeCycle
+- [ ] Abstract
+- [ ] Communication
+- [ ] componentCompose
+- [ ] Pure
+- [ ] domDiff
