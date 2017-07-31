@@ -35,6 +35,7 @@ export default class Mount extends Component {
 
 
     shouldComponentUpdate(){
+        // 在初始化时或者使用 forceUpdate 时不被执行
         console.log('should component update');
         return false;//return true;
     }
