@@ -9,8 +9,8 @@ import {
     Style,
     SpreadDemo
 } from './2-Jsx';
-import { StateDemo, PropDemo, PropTypesDemo } from './3-State';
-import { Mount, Update, Test } from './4-LifeCycle';
+import { StateDemo, PropDemo, PropTypesDemo, StateTest} from './3-State';
+import { Mount, Update, UnMount } from './4-LifeCycle';
 
 import { ParentToChild, ChildToParent, Cross, EETest } from './5-communication';
 
@@ -35,7 +35,6 @@ class App extends Component {
 
         <Setup />
 
-
         // 2. jsx
         <HelloMessage name={"llfly"}/>
         <HelloMessage2 name={"llfly"}/>
@@ -49,12 +48,12 @@ class App extends Component {
         <StateDemo/>
         <PropDemo/>
         <PropTypesDemo/>
-
-
+        <StateTest/>
 
         // 4. LifeCycle
-
-
+        <Mount/>
+        <Update/>
+        <UnMount/>
 
 
          <ParentToChild list={[{value:1},{value:2}]} title={`ParentToChild`}/>
@@ -89,7 +88,7 @@ class App extends Component {
 
         return (
             <div>
-                <PropDemo />
+<StateTest/>
             </div>
         )
     }

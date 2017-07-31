@@ -38,8 +38,3 @@ componentWillUpdate()
 render()
 componentDidUpdate()
 
-
-# question
-
-
-1. setState 的过程 详见 test

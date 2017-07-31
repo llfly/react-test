@@ -1,7 +1,8 @@
 import React ,{ Component } from 'react';
 
+//state 的 set 过程 ？ 
 
-export default class Test extends Component {
+export default class StateTest extends Component {
     constructor(props) {
         super(props);
         this.state = {

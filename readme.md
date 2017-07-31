@@ -4,7 +4,7 @@
 - [x] Setup
 - [x] Jsx
 - [x] State
-- [ ] LifeCycle
+- [x] LifeCycle
 - [ ] Abstract
 - [ ] Communication
 - [ ] componentCompose
