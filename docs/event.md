@@ -1,5 +1,5 @@
 
-# React第六讲课堂笔记（事件）
+# 事件
 
 可以通过设置原生 dom 组件的 onEventType 属性来监听 dom 事件，例如 onClick, onMouseDown，在加强组件内聚性的同时，避免了传统 html 的全局变量污染
 

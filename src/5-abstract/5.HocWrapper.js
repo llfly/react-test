@@ -18,7 +18,6 @@ hocFactory:: W: React.Component => E: React.Component
 */
 
 
-
 //属性代理
 
 import React, {Component} from 'react';

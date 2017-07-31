@@ -12,16 +12,20 @@ import {
 import { StateDemo, PropDemo, PropTypesDemo, StateTest} from './3-State';
 import { Mount, Update, UnMount } from './4-LifeCycle';
 
-import { ParentToChild, ChildToParent, Cross, EETest } from './5-communication';
-
 import {
-    ReactMixin, MyClass, MyComponent, MyContainer,
+    ReactMixin, Es7Decorators, MyComponent, MyContainer,
     MyComponent1, MyComponent2, MyComponent3, MyComponent4,
     MyComponentDecorators1, MyComponentDecorators2, MyComponentDecorators3, MyComponentDecorators4, MyComponentDecorators5
-} from './5-abstract';
+} from './5-Abstract';
+
+import { ParentToChild, ChildToParent, Cross, EETest } from './6-Communication';
 
 
-import { SearchSelect, SearchSele } from './6-componentCompose';
+
+
+
+
+import { SearchSelect, SearchSele } from './7-ComponentCompose';
 
 
 class App extends Component {
@@ -32,8 +36,8 @@ class App extends Component {
     render() {
         /*
         // 1. setup
-
         <Setup />
+
 
         // 2. jsx
         <HelloMessage name={"llfly"}/>
@@ -50,25 +54,18 @@ class App extends Component {
         <PropTypesDemo/>
         <StateTest/>
 
+
         // 4. LifeCycle
         <Mount/>
         <Update/>
         <UnMount/>
 
 
-         <ParentToChild list={[{value:1},{value:2}]} title={`ParentToChild`}/>
-         <ChildToParent />
-         <Cross />
-         <EETest/>
-
-
-
+        // 5. Abstract
          <ReactMixin/>
-         <MyClass/>
+         <Es7Decorators/>
          <MyComponent/>
          <MyContainer/>
-
-
 
          <MyComponent1 />
          <MyComponent2 />
@@ -81,6 +78,15 @@ class App extends Component {
          <MyComponentDecorators4/>
          <MyComponentDecorators5 />
 
+
+        // 6. Communication
+         <ParentToChild />
+         <ChildToParent />
+         <Cross />
+         <EETest/>
+
+        
+
         <SearchSelect placeholder={"test"} onSearch={e=>{console.log(e)}} data={["1","2","123","123","1231231","424324123"]}/>
         <SearchSele />
 
@@ -88,7 +94,7 @@ class App extends Component {
 
         return (
             <div>
-<StateTest/>
+                <Es7Decorators/>
             </div>
         )
     }

@@ -30,6 +30,16 @@ function List({list,title}){
 }
 
 
+function ParentToChild() {
+    let prop = {
+        list :[{value:1},{value:2}],
+        title:`ParentToChild`
+    }
+
+    return <List {...prop}/>
+}
 
 
-export default List;
+
+
+export default ParentToChild;

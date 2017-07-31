@@ -5,8 +5,8 @@
 - [x] Jsx
 - [x] State
 - [x] LifeCycle
-- [ ] Abstract
+- [x] Abstract
 - [ ] Communication
-- [ ] componentCompose
+- [ ] ComponentCompose
 - [ ] Pure
 - [ ] domDiff

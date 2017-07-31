@@ -1,5 +1,5 @@
 import ReactMixin from './2.reactMixin'
-import MyClass from './3.es7Decorators'
+import Es7Decorators from './3.es7Decorators'
 import MyComponent from './4.npmMixin'
 import MyContainer from './5.HocWrapper'
 import {MyComponent1,MyComponent2,MyComponent3,MyComponent4} from './6.HocWrapperOperator'
@@ -7,7 +7,7 @@ import {MyComponentDecorators1,MyComponentDecorators2,MyComponentDecorators3,MyC
 
 export default {
     ReactMixin,
-    MyClass,
+    Es7Decorators,
     MyComponent,
     MyContainer,
     MyComponent1,

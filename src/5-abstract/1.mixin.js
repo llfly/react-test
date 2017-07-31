@@ -3,6 +3,8 @@ const mixin = (obj, mixins) => {
     newObj.prototype = Object.create(obj.prototype || null);
     for (var prop in mixins) {
         if (mixins.hasOwnProperty(prop)) {
+            // hasOwnProperty()函数用于指示一个对象自身(不包括原型链)是否具有指定名称的属性。
+            // 如果有，返回true，否则返回false。
             newObj.prototype[prop] = mixins[prop];
         }
     }
@@ -21,7 +23,6 @@ const BigMixin = {
 const Big = function () {
     console.log('new big');
 };
-
 
 console.log(Big.prototype);
 

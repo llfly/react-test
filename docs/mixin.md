@@ -1,4 +1,4 @@
-# React第九讲课堂笔记（mixin）
+# mixin
 
 mixin 是一个普通对象，通过 mixin 可以在不同组件间共享代码，使你的React程序变得更为可重用。
 

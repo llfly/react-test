@@ -1,12 +1,39 @@
 import React, {Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
+console.log(PureRenderMixin);
+
+
+// class MixinTest extends Component {
+//     render() {
+//         return <div>mixinTest</div>
+//     }
+// }
+const mountMixin = {
+    componentDidMount(){
+        console.log('mountMixin componentDidMount');
+    },
+    componentWillMount(){
+        console.log('mountMixin componentWillMount');
+    }
+}
+
+const logMixin = {
+    log : ()=>console.log('log mixin'),
+    componentDidMount(){
+        console.log('logMixin componentDidMount')
+    }
+}
 
 
 export default React.createClass({
-    mixins:[PureRenderMixin],
+    mixins:[PureRenderMixin,mountMixin,logMixin],
+
     render(){
-        return <div>foo</div>
+        return <div>
+            mixinTest
+            <input type="button" value="log" onClick={this.log}/>
+        </div>
     }
 })
 

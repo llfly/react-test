@@ -4,7 +4,7 @@ import React,{Component} from 'react';
 //可以对类进行装饰
 function isTestable(value) {
     /* @params:
-     * target: 当前装饰类：MyClass
+     * target: 当前装饰类：Es7Decorators
      * */
     return function decorator(target) {
         // 装饰类属性
@@ -14,7 +14,7 @@ function isTestable(value) {
 
 function enumerable(value) {
     /* @params:
-     * target: 当前装饰类：MyClass
+     * target: 当前装饰类：Es7Decorators
      * key: 当前装饰属性名:method
      * descriptor: defineProperty函数的第三个参数：descriptor
      * */
@@ -29,7 +29,7 @@ function enumerable(value) {
 
 
 @isTestable(true)
-class MyClass extends Component {
+class Es7Decorators extends Component {
 
     @enumerable('llfly')
     method(){
@@ -37,13 +37,13 @@ class MyClass extends Component {
     }
 
     render(){
-        console.log(this.method(),MyClass.isTestable);
+        console.log(this.method(),Es7Decorators.isTestable);
         return <div>es7DecoratorsTest</div>
     }
 }
 
 
-export default MyClass;
+export default Es7Decorators;
 
 
 /*

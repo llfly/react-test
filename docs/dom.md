@@ -1,4 +1,4 @@
-# React第五讲课堂笔记（DOM操作）
+# DOM操作
 
 ## 1. `React 中获取DOM的两种方式`
 - ReactDOM.findDOMNode
